@@ -3,6 +3,7 @@ import './Checkout.css';
 import Subtotal from './Subtotal';
 
 const Checkout = () => {
+  console.log('Checkout');
   return (
     <div className='checkout'>
       <div className='checkout__left'>
