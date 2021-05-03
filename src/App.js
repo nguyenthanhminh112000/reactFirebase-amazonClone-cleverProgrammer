@@ -5,20 +5,22 @@ import Home from './components/Home';
 
 function App() {
   return (
-    <div className='app'>
-      <Router>
+    <Router>
+      <div className='app'>
+        <Header />
         <Switch>
           <Route path='/' exact>
-            <Header />
             <Home />
           </Route>
+          <Route path='/login'>
+            <div>Login page</div>
+          </Route>
           <Route path='/checkout'>
-            <Header />
             <Checkout />
           </Route>
         </Switch>
-      </Router>
-    </div>
+      </div>
+    </Router>
   );
 }
 

@@ -25,7 +25,9 @@ const Header = () => {
       <div className='header__nav'>
         <div className='header__option'>
           <span className='header__optionLineOne'>Hello, Minh</span>
-          <span className='header__optionLineTwo'>Sign in</span>
+          <Link to='/login'>
+            <span className='header__optionLineTwo'>Sign in</span>
+          </Link>
         </div>
         <div className='header__option'>
           <span className='header__optionLineOne'>Returns</span>
@@ -39,7 +41,7 @@ const Header = () => {
           <div className='header__optionBasket'>
             <ShoppingBasketIcon />
             <span className='header__optionLineTwo header__basketCount'>
-              {basket?.length}
+              {basket.length}
             </span>
           </div>
         </Link>
