@@ -2,7 +2,7 @@ import React from 'react';
 import { useStateValue } from '../ReactContextAPI/StateProvider';
 import './CheckoutProduct.css';
 const CheckoutProduct = ({ id, title, price, rating, image }) => {
-  const [{ basket }, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
   console.log('Checkout Product');
   const handleRemoveProduct = () => {
     dispatch({ type: 'REMOVE_FROM_BASKET', id: id });

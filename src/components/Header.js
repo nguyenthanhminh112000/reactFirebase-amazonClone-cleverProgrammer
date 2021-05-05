@@ -7,7 +7,7 @@ import { useStateValue } from '../ReactContextAPI/StateProvider';
 import { auth } from '../firebase';
 
 const Header = () => {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket, user }] = useStateValue();
   console.log('Header');
   const handleAuthentication = () => {
     if (user) {

@@ -5,7 +5,7 @@ import { useStateValue } from '../ReactContextAPI/StateProvider';
 import { getBasketTotal } from '../ReactContextAPI/reducer';
 const Subtotal = () => {
   console.log('Subtotal');
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket }] = useStateValue();
 
   return (
     <div className='subtotal'>

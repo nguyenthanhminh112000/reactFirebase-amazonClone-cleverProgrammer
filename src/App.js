@@ -8,7 +8,7 @@ import { auth } from './firebase';
 import { useStateValue } from './ReactContextAPI/StateProvider';
 
 function App() {
-  const [state, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
   useEffect(() => {
     // add Event-Listener for
     auth.onAuthStateChanged((user) => {
