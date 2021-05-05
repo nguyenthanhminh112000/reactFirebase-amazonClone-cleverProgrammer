@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './Login.css';
+import { auth } from './../firebase';
 
 const Login = () => {
+  console.log('Login');
+  const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const handleEmailChange = (e) => {
@@ -11,15 +14,36 @@ const Login = () => {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
-  const handleSignIn = (e) => {
+  const handleSignIn = async (e) => {
+    e.preventDefault();
+    try {
+      const authentication = await auth.signInWithEmailAndPassword(
+        email,
+        password
+      );
+      if (authentication) {
+        history.push('/');
+      }
+    } catch (error) {
+      alert(error.message);
+    }
     e.preventDefault();
     // doing Sign In stuff
-    console.log(email);
-    console.log(password);
   };
-  const handleSignUp = (e) => {
+  const handleSignUp = async (e) => {
     // doing Sign Up stuff
-    console.log('a');
+    try {
+      const authentication = await auth.createUserWithEmailAndPassword(
+        email,
+        password
+      );
+      console.log(authentication);
+      if (authentication) {
+        history.push('/');
+      }
+    } catch (error) {
+      alert(error.message);
+    }
   };
   return (
     <div className='login'>
