@@ -1,7 +1,14 @@
 .checkoutProduct {
   display: flex;
-  margin: 20px 0;
-  padding: 20px;
+}
+.checkoutProduct__checkoutUtilities {
+  margin: 20px 0 40px 20px;
+}
+.checkoutProduct__paymentUtilities {
+  margin-bottom: 40px;
+}
+.checkoutProduct__paymentUtilities:last-child {
+  margin-bottom: 0px;
 }
 
 .checkoutProduct__image {

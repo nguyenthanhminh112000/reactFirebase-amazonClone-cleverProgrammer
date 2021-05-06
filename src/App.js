@@ -1,11 +1,12 @@
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { useEffect } from 'react';
+import { auth } from './firebase';
+import { useStateValue } from './ReactContextAPI/StateProvider';
 import Header from './components/Header';
 import Home from './components/Home';
 import Checkout from './components/Checkout';
 import Login from './components/Login';
-import { useEffect } from 'react';
-import { auth } from './firebase';
-import { useStateValue } from './ReactContextAPI/StateProvider';
+import Payment from './components/Payment';
 
 function App() {
   const [, dispatch] = useStateValue();
@@ -20,16 +21,20 @@ function App() {
     <Router>
       <div className='app'>
         <Switch>
-          <Route path='/' exact>
-            <Header />
-            <Home />
-          </Route>
           <Route path='/login'>
             <Login />
           </Route>
           <Route path='/checkout'>
             <Header />
             <Checkout />
+          </Route>
+          <Route path='/payment'>
+            <Header />
+            <Payment />
+          </Route>
+          <Route path='/'>
+            <Header />
+            <Home />
           </Route>
         </Switch>
       </div>

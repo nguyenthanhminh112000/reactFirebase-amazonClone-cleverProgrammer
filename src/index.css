@@ -1,7 +1,10 @@
 * {
   margin: 0;
 }
-
+a {
+  text-decoration: none;
+  color: black;
+}
 body {
   z-index: 10;
   background-color: rgb(234, 237, 237);

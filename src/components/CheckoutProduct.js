@@ -8,7 +8,7 @@ const CheckoutProduct = ({ id, title, price, rating, image }) => {
     dispatch({ type: 'REMOVE_FROM_BASKET', id: id });
   };
   return (
-    <div className='checkoutProduct'>
+    <div className='checkoutProduct '>
       <img
         src={image}
         alt='Checkout Product'
