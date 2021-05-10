@@ -4,7 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Architecture
 
-![Architecture](https://github.com/nguyenthanhminh112000/BradTraversy-TaskTracer/blob/master/Architecture.png?raw=true)
+![Architecture](https://github.com/nguyenthanhminh112000/reactFirebase-amazonClone-cleverProgrammer/blob/master/AmazonCloneArchitecture.png?raw=true)
+
+## Note
+
+My application havent finished yet. Please contribute more if you want. Thanks you guys!!!
 
 ## Run into development
 
