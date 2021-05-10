@@ -8,12 +8,12 @@ import { useHistory } from 'react-router';
 const Subtotal = () => {
   console.log('Subtotal');
   const history = useHistory();
-  const [{ basket, user }] = useStateValue();
+  const [{ basket }] = useStateValue();
   const goToPayment = (e) => {
-    if (user && Array.isArray(basket) && basket.length > 0) {
+    if (Array.isArray(basket) && basket.length > 0) {
       history.push('/payment');
     } else {
-      console.log('Please sign in, OR, you have an empty BASKET!');
+      console.log('You have an empty BASKET!');
     }
   };
   return (
